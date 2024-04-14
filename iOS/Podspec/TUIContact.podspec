@@ -101,6 +101,9 @@ Pod::Spec.new do |spec|
    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
    'GENERATE_INFOPLIST_FILE' => 'YES'
   }
+  spec.resource_bundle = {
+    "#{spec.module_name}_Privacy" => '**/TUIContact/Resources/PrivacyInfo.xcprivacy'
+  }
 end
 
 # pod trunk push TUIContact.podspec --use-libraries --allow-warnings

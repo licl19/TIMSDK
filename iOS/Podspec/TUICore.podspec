@@ -50,6 +50,9 @@ Pod::Spec.new do |spec|
     'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) ENABLE_SCENARIO_SDK',
     'GENERATE_INFOPLIST_FILE' => 'YES'
   }
+  spec.resource_bundle = {
+    "#{spec.module_name}_Privacy" => '**/TUICore/Resources/PrivacyInfo.xcprivacy'
+  }
 end
 
 # pod trunk push TUICore.podspec --use-libraries --allow-warnings
